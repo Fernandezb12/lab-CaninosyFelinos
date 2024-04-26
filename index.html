@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta author="Daniel Fernandez">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="img/pet_icon.png"/>
+    <title>Caninos Y Felinos</title>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <h1>Centro Veterinario</h1>
+      <h2>Caninos y</h2>
+      <h3>Felinos</h3>
+    </div>
+    <img src="img/pet_logo.png" alt="logo" width="250px" height="250px">
+    <nav class="container-box">
+      <ul class="container-menu">
+        <li><a href="servicios.html"><b>Servicios</b></a></li>
+        <li><a href="productos.html"><b>Productos</b></a></li>
+        <li><a href="guarderia.html"><b>Guardería</b></a></li>
+        <li><a href="promociones.html"><b>Promociones</b></a></li>
+      </ul>
+    </nav>
+  </header>
+  <div class="container-main-content">
+    <div class="article-container">
+      <div class="article-text">
+          <h2>Cuidados y educación para su perro</h2>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi fuga sapiente, maiores consectetur veritatis porro, minus nulla accusantium iusto nesciunt, laudantium nihil quisquam expedita assumenda ipsum temporibus. Ipsam, dolorem quia?</p>
+          <img src="img/dog.jpg" class="img1" alt="Perro">
+          <a href="#">Ver más...</a>
+      </div>
+    </div>
+    <div class="article-container">
+      <div class="article-text">
+          <h2>Salir de viaje con su mascota</h2>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi fuga sapiente, maiores consectetur veritatis porro, minus nulla accusantium iusto nesciunt, laudantium nihil quisquam expedita assumenda ipsum temporibus. Ipsam, dolorem quia?</p>
+          <img src="img/cats.jpg" alt="Gatos" width="200px" height="150px">
+          <a href="https://www.tierragro.com/blogs/news/consejos-vacaciones-mascota">Ver más...</a>
+      </div>
+    </div>
+    <div class="col col4">
+      <form id="formulario" action="/submit_appointment" method="post" name="formulario">
+        <h2>Solicitar Cita Médica</h2>
+        <ul>
+          <li>
+            <label for="pet-name">Mascota:</label>
+            <input type="text" id="pet-name" name="pet_name" placeholder="Ingrese el Nombre:" required>
+          </li>
+          <li>
+            <label for="pet-age">Edad:</label>
+            <input type="number" id="pet-age" name="pet_age" min="0" max="30" required>
+          </li>
+          <li>
+            <label for="pet-breed">Raza:</label>
+            <input type="text" id="pet-breed" name="pet_breed" placeholder="Ingrese Raza:" required>
+          </li>
+          <li>
+            <label for="date">Fecha:</label>
+            <input type="date" id="date" name="date" required>
+          </li>
+          <li>
+            <label for="time">Hora:</label>
+            <input type="time" id="time" name="time" required>
+          </li>
+          <li>
+            <label for="name">Amo</label>
+            <input type="text" id="name" name="name" placeholder="Ingrese el Nombre:" required>
+          </li>
+          <li>
+            <button id="validarCita" type="submit">VALIDAR CITA</button>
+          </li>
+        </ul>
+      </form>
+    </div>
+  </div>
+  <footer>
+    <div class="container">
+      <p class="pie">Contáctenos<br>Línea gratuita 018000-00001<br>Correo: preguntas@caninosyfelinos.com</p>
+    </div>
+  </footer>
+</body>
+</html>
