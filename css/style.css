@@ -12,6 +12,7 @@ body {
 /* Estilos para el encabezado */
 header {
     background-image: url('../img/bac.jpeg');
+    background-color: rgba(0, 0, 0, 0.9); 
     display: flex;
     justify-content: center;
     align-items: center;
@@ -31,7 +32,6 @@ header {
     position: relative;
     z-index: 1;
 }
-
 header img {
     width: 100px;
     height: 100px;
@@ -39,28 +39,25 @@ header img {
     margin-right: 20px;
     margin-left: 20px;
 }
-.img1 {
-    width: 100px;
-    height: 100px;
-    margin-right: 20px; /* Margen a la derecha de la imagen */
-    float: left; /* Coloca la imagen a la izquierda */
-}
 header h2,
 header h3 {
     /* Estilo para los elementos h2 y h3 dentro del encabezado */
-    color: #808080; /* Color de texto gris */
-    background: linear-gradient(to bottom, #808080, #615b5b); /* Degradado de gris a negro */
+    color: #000000; /* Color de texto gris */
+    background: linear-gradient(to bottom, #323c43, #4b535a); /* Degradado de gris a negro */
     -webkit-background-clip: text; /* Clip de fondo para aplicar el degradado solo al texto */
-    -webkit-text-fill-color: transparent; /* Color de texto transparente para que se muestre el degradado */
     display: inline-block; /* Permite que los títulos estén en línea con la imagen */
     vertical-align: middle; /* Alinea verticalmente el texto con la imagen */
+    text-align: left; /* Alinea el texto a la izquierda */
+}
+header h1 {
+    margin-top: -10%;
 }
 header h2 {
     font-size: 60px;
     margin: -20px 0 0; /* Ajusta el margen superior para subir el texto */
     font-weight: 900;
     font-style: italic;
-    text-shadow: 2px 2px 4px #000000;
+    text-shadow: 2px 2px 4px #ededed;
 }
 
 header h3 {
@@ -69,7 +66,7 @@ header h3 {
     font-family: Arial, sans-serif;
     font-weight: 900;
     font-style: italic;
-    text-shadow: 2px 2px 4px #000000;
+    text-shadow: 2px 2px 4px #d8dadc;
 }
 
 /* Estilos para la barra de navegación */
@@ -86,7 +83,6 @@ header h3 {
     justify-content: center;
     align-items: center;
 }
-
 nav ul {
     list-style-type: none;
     padding: 0;
@@ -117,8 +113,7 @@ nav ul li a {
     align-items: center;
     justify-content: center;
     border-radius: 20px;
-    transition: background-color 0.5s;
-}
+    transition: background-color 0.5s;}
 
 nav ul li a:hover {
     background-color: #21b6ae;
@@ -139,33 +134,38 @@ nav ul li a:hover {
     margin-bottom: 20px;
     border-radius: 20px;
 }
+.main-content {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    padding: 1rem;
+    border-radius: 20px;
+}
 
 .article-container {
     background-color: #faf5b9;
     border-radius: 30px;
     grid-column: 1/2;
 }
-
 .article {
     background-color: gray;
-    padding: 1rem;
+    padding: 100%; /* Aumenta el padding para separar más el contenido del borde */
     border-radius: 10px;
     margin-bottom: 2rem;
     border: black 1px solid;
     border-radius: 20px;
     box-shadow: 0 0 10px #000000;
 }
+.article-text {
+    overflow: hidden; /* Ocultar el exceso de texto */
+    padding: 20px; 
+    padding-right: 50px;
+}
 
-.article h2 {
-    margin-top: 0;
-    margin-bottom: 1rem;
-    text-align: center;
-    font-size: 2rem;
-    color: white;
-    background-color: #1c4947;
-    border-radius: 20px;
-    padding: 0.5rem;
-    box-shadow: 0 0 10px #000000;
+.article-text h2 {
+    text-align: left;
+    margin-top: 0; /* Eliminar el margen superior para alinear con la imagen */
 }
 
 .article p {
@@ -173,11 +173,15 @@ nav ul li a:hover {
     text-align: justify;
     font-size: 1.2rem;
     line-height: 1.5;
-    padding: 1rem;
 }
 
 .article-container img {
+    width: 120px; /* Reducir el ancho de la imagen */
+    height: auto; /* Altura automática para mantener la proporción */
     border-radius: 20px;
+    margin-right: 20px; /* Margen a la derecha de la imagen */
+    float: right; /* Colocar la imagen a la derecha */
+    margin-top: -35px;
 }
 
 .col4 {
@@ -199,29 +203,31 @@ nav ul li a:hover {
     flex-direction: column; /* Apila los elementos verticalmente */
     align-items: center; /* Centra horizontalmente los elementos */
     justify-content: center; /* Centra verticalmente los elementos */
-
+    text-align: center; /* Centra el texto horizontalmente */
 }
 
 #formulario li {
     display: flex;
     align-items: center; /* Alinea verticalmente los elementos */
-    justify-content: flex-start; /* Alinea los elementos a la izquierda */
+    justify-content: center; /* Centra horizontalmente los elementos */
     margin-bottom: 10px; /* Agrega margen entre los elementos */
 }
 
 #formulario label {
     /* Estilos para las etiquetas */
     margin-right: 20px; /* Ajusta el margen derecho para separar la etiqueta del campo de entrada */
+    text-align: center; /* Centra el texto horizontalmente */
 }
 
 #formulario input {
     /* Estilos para los campos de entrada */
     height: 20px;
-    width: 160px;
+    width: 80px;
     padding: 5px 8px;
     border-radius: 0.5em;
     border: 1px solid #ccc;
     margin-left: auto; /* Centra el campo de entrada */
+    text-align: center; /* Centra el texto horizontalmente */
 }
 
 #formulario button {
